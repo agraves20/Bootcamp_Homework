@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/solar/bootstrap.min.css">
+</head>
+
+<body>
+    <div clas="container">
+      <div class="jumbotron">
+          <h1 align="center">Mission to Mars</h1>
+          
+          <p align="Center">
+              <a class="btn btn-primary btn-lg" href="scrape" role="button">Scrape New Data</a>
+
+          </p>
+      </div>
+
+          <!-- First Row -->
+      <div class="row"> 
+        <!-- First (and only column) -->
+        <div class="col-md-12">
+          <h3 class="card-header">Latest Mars News</h3>
+          <div class="card-body">
+            <div class="container-fluid">
+              <h5>{{mars.news_title}}</h5>
+                  <p>{{mars.news_p}}</p>
+              </div>
+          </div>
+        </div>  
+      </div>
+ 
+        <!-- Second Row -->
+      <div class="row">
+        <!--First of Two Columns-->
+        <div class="col-md-7">
+          <img style="width: 80%" src={{mars.featured_image_url}} alt="Card image">
+        </div>
+          <!--Second of Two Columns-->
+        <div class="col-md-5">
+          <ul>
+          <h5>Current Weather on Mars</h5>
+            <p class="card-text">{{mars.mars_weather}}</p>
+          </ul>
+
+          <ul>
+          <h5>Mars Facts</h5>
+            {{mars.mars_facts|safe}}
+            <a href="{{mars.mars_facts}}"></a>
+          </ul>
+          
+        </div>
+      </div>
+
+    </div>
+
+</body>
+
+</html>
