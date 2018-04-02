@@ -1,0 +1,27 @@
+.story-title .lead {
+    font-size: 30px;
+    color: #268F8A;
+    font-weight: bold;
+
+}
+
+
+
+
+body {
+    background-color: #DBDFDF;
+
+}
+
+.navbar .card {
+    background-color: #fff;
+
+}
+
+.thumb-image {
+    width:48%;
+}
+
+.fa-cloud {
+    color: #fff;
+}
