@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <!-- https://www.bootstrapcdn.com/bootswatch/ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.3/d3.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/united/bootstrap.min.css">
+    <link rel="stylesheet" type='text/css' href="site.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Home</title>
+</head>
+
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="navbar-brand">
+            <i class="fas fa-flask"></i> Home
+        </div>
+    </header>
+ 
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- jumbotron -->
+            <div class="jumbotron">
+              <div class="container">
+                <h1 class="text-center"><strong>Belly Button Biodiversity <br> Dashboard</strong></h1>
+                <p class="text-center">Use the interactive charts below to explore the dataset</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card bg-light mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="selSample">SELECT Sample:</label>
+                            <select id="selSample" onchange="optionChanged(this.value)"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-light mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <div class="card-header">Sample MetaData</div>
+                            <div id="sample-metadata"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <div class="card bg-light mb-3">
+                    <div class='card-body'>
+                        <div id='pie'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card bg-light mb-3">
+                    <div class='card-body'>
+                        <div id='bubblePlot'></div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src = "../static/js/app.js" type="text/javascript"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</body>
+
+</html>
